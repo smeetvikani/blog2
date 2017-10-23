@@ -1,1 +1,1 @@
-# [Lets Learn AI](https://www.letslearnai.com)
+# Lets Learn AI
