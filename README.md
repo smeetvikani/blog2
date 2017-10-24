@@ -1,1 +1,1 @@
-# Lets Learn AI
+# Let's Learn AI
