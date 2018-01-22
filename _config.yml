@@ -1,0 +1,19 @@
+title:             Let's Learn AI
+email:             amit.shekhar.iitbhu@gmail.com
+description:       Let's Learn AI is all about learning artificial intelligence, machine learning, natural language processing and etc.
+author:            Amit Shekhar
+baseurl:           ""
+url:               "https://www.letslearnai.com"
+
+# Social Profiles
+twitter_username:  amitiitbhu
+github_username:   amitshekhariitbhu
+facebook_username: amit.shekhar.iitbhu
+
+# Build settings
+markdown:          kramdown
+paginate:          5
+paginate_path:     "/posts/page:num/"
+plugins:
+  - jekyll-feed
+  - jekyll-paginate

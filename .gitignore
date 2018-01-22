@@ -1,6 +1,5 @@
+_site
 node_modules
-<<<<<<< HEAD
+Gemfile.lock
 .sass-cache
-=======
-bower_components
->>>>>>> master
+*.gem
