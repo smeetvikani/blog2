@@ -1,0 +1,229 @@
+---
+layout: post
+title:  "Simplest Introduction To Machine Learning"
+subtitle: "What is Machine Learning?"
+date:   2018-02-02 23:45:13 -0400
+background: '/img/posts/06.jpg'
+---
+<h3>
+Yet an another article on - Introduction To Machine Learning.
+</h3>
+
+<p>
+	Believe me, this article is going to be the simplest introduction to the term <b>Machine Learning</b>.
+</p>
+
+<p>
+	So, let’s start without wasting our time.
+</p>
+
+<h3>
+	What is Machine Learning?
+</h3>
+
+<p>
+	Let’s go through the Wikipedia definition.
+</p>
+
+<p>
+	<b>Machine learning</b> is a field of computer science that gives computers the ability to learn without being explicitly programmed.
+</p>
+
+<p>
+	Yes, it's a field of computer science. But how does the machine gets the ability to learn and that even without being explicitly programmed.
+</p>
+
+<p>
+	And we all know that whatever a machine does, it does because it is being explicitly programmed to do so.
+</p>
+
+<p>
+	So, here the sentence <b>ability to learn without being explicitly programmed</b> is very important.
+</p>
+
+<p>
+	Let’s figure it out how does it get the ability to learn without being explicitly programmed.
+</p>
+
+<p>
+	Let say you have to write a program to find the value of <code>y</code> in <code>y = mx+c</code> where the values of the constants <code>m</code> and <code>c</code> are already given.
+</p>
+
+<p>
+	When you provide the value of <code>x</code> to the <code>mx+c</code>, it will give you the value of <code>y</code>.
+</p>
+
+<p>
+	How will you program it?
+</p>
+
+
+<pre><code class="java">
+public class LetsLearnAI {
+	
+  private static final int m = 10;
+  private static final int c = 1;
+
+  public static int getY(int x){
+    return (m*x) + c;
+  }
+
+}     
+
+</code></pre>
+
+<p>
+	Now, you can call that function for the value of <code>x=10</code> like below.
+</p>
+
+<pre><code class="java">
+  y = LetsLearnAI.getY(10);
+
+</code></pre>
+
+<p>
+	This way, you get the value of <code>y</code> as <code>101</code>.
+</p>
+
+<p>
+	Now let’s say someone has given you so many values of <code>x</code> and the corresponding values of <code>y</code> for the given <code>x</code>.
+</p>
+
+<pre>
+x  |  y
+-------
+10 | 101
+5  | 51
+20 | 201
+50 | 501
+and much more.
+</pre>
+
+<p>
+	Then, asked you, what will be the <code>y</code> when <code>x</code> is <code>30</code>?
+</p>
+
+<p>
+	You will start thinking by seeing the data and try to find some sort of relations and equations between x and y.
+</p>
+
+<p>
+	After so many hit and trail. You will think that it may be a linear equation <code>y = mx + c</code> with <code>m = 10</code> and <code>c = 1</code>;
+</p>
+
+<p>
+	Then, you will tell that for <code>x = 30</code>, <code>y</code> will be <code>301</code>.
+</p>
+
+<p>
+	If the same thing is being done by the machine, we say the machine has learned to find <code>y</code> when we provide a new <code>x</code>. And the machine has learned it from the previous data.
+</p>
+
+<p>
+	This is <b>Machine Learning</b>.
+</p>
+
+<p>
+	So, how will the machine learn it? We will help the machine to learn it.
+</p>
+
+<p>
+	Basically, after seeing the data, we will tell the machine that the equation is <code>y = mx+c</code>. But let the machine find the value of <code>m</code> and <code>c</code> based on the data.
+</p>
+
+<p>
+	First of all, we will initialize <code>m</code> and <code>c</code> with some random value like <code>2</code> and <code>3</code> and then define an equation like below:
+</p>
+
+<pre><code class="java">
+  yPred = (m*x) + c;
+
+</code></pre>
+
+<p>
+	<code>yPred</code> means the predicted value of <code>y</code> by the machine.
+</p>
+
+<p>
+	Then, we will compare it with the true value of <code>y</code> from the given data, we will see that how much it differ from the true value of <code>y</code>, then we will provide a way to the machine to modify the value of <code>m</code> and <code>c</code> so that it gets closer to the true value of <code>y</code>.
+</p>
+
+<p>
+	The machine will iterate it again and again till it finds <code>m = 10</code> and <code>c = 1</code>.
+</p>
+
+<p>
+	The difference between the predicted and true value, we call it as an error.
+</p>
+
+<p>
+	Basically, the machine needs to minimize the error as much it can.
+</p>
+
+<img class="img-fluid" src="/img/posts/mse.png" alt="Mean squared error">
+<span class="caption text-muted">Mean squared error</span>
+
+<p>
+	Think of <code>y^</code> as a predicted value and <code>y</code> as a true value. Here, we take the difference between both(<code>y^</code> and <code>y</code>) and square it because the error can be -ve also. Then we add all the errors, after that, we take the square root (because we had squared it earlier) and finally divide it by <code>N</code> (finding mean because we had added all the errors earlier). So, this is known as the <b>mean squared error (MSE)</b>.
+</p>
+
+<p>
+	The error should be close to zero after considering all the values of <code>yPred</code> and the true values of <code>y</code>.
+</p>
+
+<p>
+	So, we program for the error function and the minimizer so that the machine can minimize the error and find the correct values of <code>m</code> and <code>c</code>.
+</p>
+
+<p>
+	Now, the machine knows the values of <code>m</code> and <code>c</code>, it can easily tell you the value of <code>y</code> for any new <code>x</code>.
+</p>
+
+<p>
+	This was a very simple example for understanding. In some other case, after seeing the data, if we think that it’s going to be parabolic then, we define <code>y</code> as below:
+</p>
+
+<pre><code class="java">
+  y = (a*x*x) + (b*x) + c;
+
+</code></pre>
+
+<p>
+	Then, we try to find the values of <code>a</code>, <code>b</code> and <code>c</code>.
+</p>
+
+<p>
+	Then, we can predict any <code>y</code> from the given <code>x</code>.
+</p>
+
+<p>
+	This way we help the machine in learning the value of the constants in the equation.
+</p>
+
+<p>
+	Basically, we help the machine to find the relation between <code>x</code> and <code>y</code> with some equations (we help in defining the equation as linear or polynomial by looking at the data from our experience).
+</p>
+
+<p>
+	For a human, it is tough to find the correct values of those constants as there are so many calculations involved like calculating error, minimizing it and iterating it till the error reaches very close to zero. So, we have given this task to the machine.
+</p>
+
+<p>
+	This way the machine learning can be applied to any problem that we want to solve.
+</p>
+
+<p>
+	Machine Learning works on the same analogy on which our brain works.
+</p>
+
+<p>
+	When a human sees a picture, how he/she can say that this picture consists of a bird, a person or something else. He/She can say because in the past he/she has seen something like those and had learned that this is a bird, a person or something else. So he/she can recognize in future. 
+</p>
+
+<p>
+	Similarly, a machine is trained to do so but by some equations as the machine can only learn it through some numbers.
+</p>
+
+<p>
+	This is <b>Machine Learning</b>.
+</p>
