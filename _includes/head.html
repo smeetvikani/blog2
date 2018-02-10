@@ -40,11 +40,11 @@
     <meta content="{{ site.url }}/about/" property="article:author">
   {% endif %}
   {% if page.background %}
-    <meta content="{{ page.background }}" property="og:image">
-    <meta name="twitter:image" content="{{ page.background }}" />
+    <meta content="{{ site.url }}{{ page.background }}" property="og:image">
+    <meta name="twitter:image" content="{{ site.url }}{{ page.background }}" />
   {% else %}
-    <meta content="/img/bg-default.jpg" property="og:image">
-    <meta name="twitter:image" content="/img/bg-default.jpg" />
+    <meta content="{{ site.url }}/img/bg-default.jpg" property="og:image">
+    <meta name="twitter:image" content="{{ site.url }}/img/bg-default.jpg" />
   {% endif %}
   {% if page.tags %}
     {% for tag in page.tags %}
