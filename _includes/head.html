@@ -11,10 +11,13 @@
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
     <meta content="{{ site.title }}" property="og:site_name">
+    <meta name="twitter:card" content="summary" />
   {% if page.title %}
     <meta content="{{ page.title }}" property="og:title">
+    <meta name="twitter:title" content="{{ page.title }}" />
   {% else %}
     <meta content="{{ site.title }}" property="og:title">
+    <meta name="twitter:title" content="{{ site.title }}" />
   {% endif %}
   {% if page.title %}
     <meta content="article" property="og:type">
@@ -23,11 +26,14 @@
   {% endif %}
   {% if page.description %}
     <meta content="{{ page.description }}" property="og:description">
+    <meta name="twitter:description" content="{{ page.description }}" />
   {% else %}
     <meta content="{{ site.description }}" property="og:description">
+    <meta name="twitter:description" content="{{ site.description }}" />
   {% endif %}
   {% if page.url %}
     <meta content="{{ site.url }}{{ page.url }}" property="og:url">
+    <meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
   {% endif %}
   {% if page.date %}
     <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
@@ -35,8 +41,10 @@
   {% endif %}
   {% if page.background %}
     <meta content="{{ page.background }}" property="og:image">
+    <meta name="twitter:image" content="{{ page.background }}" />
   {% else %}
     <meta content="/img/bg-default.jpg" property="og:image">
+    <meta name="twitter:image" content="/img/bg-default.jpg" />
   {% endif %}
   {% if page.tags %}
     {% for tag in page.tags %}
