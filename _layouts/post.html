@@ -34,6 +34,19 @@ layout: default
 
       <hr>
 
+      <h4>Share This Post</h4>
+      <div>
+        <a href="https://twitter.com/share?text={{ page.title }} by @amitiitbhu&url={{ page.url | prepend: site.url }}" id="share-tw" target="_blank"><i class="fa fa-2x fa-twitter-square"></i></a>
+
+        <a href="https://www.linkedin.com/cws/share?url={{ page.url | prepend: site.url }}" id="share-li" target="_blank"><i class="fa fa-2x fa-linkedin-square"></i></a>
+
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | prepend: site.url }}" id="share-fb" target="_blank"><i class="fa fa-2x fa-facebook-square"></i></a>
+
+        <a href="https://plus.google.com/share?url={{ page.url | prepend: site.url }}" id="share-gp" target="_blank"><i class="fa fa-2x fa-google-plus-square"></i></a>
+      </div>
+
+      <br>
+
       <!-- <div id="disqus_thread"></div>
       <script>
         var disqus_config = function () {
