@@ -1,0 +1,104 @@
+---
+layout: post
+title:  "What Is Feature Engineering for Machine Learning?"
+subtitle: "Feature Engineering is an art"
+date:   2018-02-14 10:00:00 -0000
+background: '/img/posts/06.jpg'
+tags: [Machine Learning, ML, AI, Deep Learning, Neural Network, Artificial Intelligence, Feature Engineering]
+---
+<p>
+	Feature engineering is the process of using <b>domain knowledge</b> of the data to create features that make machine learning algorithms work. If feature engineering is done correctly, it increases the predictive power of machine learning algorithms by creating features from raw data that help facilitate the machine learning process. Feature Engineering is an art.
+</p>
+
+<p>
+	<b>Steps which are involved while solving any problem in machine learning are as follows:</b>
+	<ul>
+		<li>Gathering data.</li>
+		<li>Cleaning data.</li>
+		<li><b>Feature engineering</b>.</li>
+		<li>Defining model.</li>
+		<li>Training, testing model and predicting the output.</li>
+	</ul>
+</p>
+
+<p>
+	Feature engineering is the most important art in machine learning which creates the huge difference between a good model and a bad model. Let's see what feature engineering covers.
+</p>
+
+<p>
+	Suppose, we are given a data "flight date time vs status". Then, given the date-time data, we have to predict the status of the flight.
+</p>
+
+<img class="img-fluid" style="display: block;margin-left: auto; margin-right: auto;" src="/img/posts/flight-date-time.png" alt="Flight Date Time Data">
+<span class="caption text-muted">Flight Date Time Data</span>
+
+<p>
+	As the status of the flight depends on the hour of the day, not on the date-time. We will create the new feature "Hour_Of_Day". Using the "Hour_Of_Day" feature, the machine will learn better as this feature is directly related to the status of the flight.
+</p>
+
+<img class="img-fluid" style="display: block;margin-left: auto; margin-right: auto;" src="/img/posts/flight-hour-of-day.png" alt="Flight Hour Of Day Data">
+<span class="caption text-muted">Flight Hour Of Day Data</span>
+
+<p>
+	Here, creating the new feature "Hour_Of_Day" is the feature engineering.
+</p>
+
+<p>
+	Let's see another example. Suppose we are given the latitude, longitude and other data with the given label "Price_Of_House". We need to predict the price of the house in that area. The latitude and longitude are not of any use if they are alone. So, here we will use the <b>crossed column</b> feature engineering. We will combine the latitude and the longitude to make one feature. Combining into one feature will help the model learn better.
+</p>
+
+<p>
+	Sometimes, we use the <b>bucketized column</b> feature engineering. Suppose we are given a data in which one column is the age and the output is the classification(X, Y, Z). By seeing the data, we realized that the output(X, Y, Z) is dependent on the age-range like 11-20 years age-range output to X, 21-40 years output to Y, 41-70 years output to Z. Here, we will create 3 buckets for the age-range 11-20, 21-40 and 41-70. We will create the new feature which is the bucketized column "Age_Range" having the numerical values 1, 2 and 3 where 1 is mapped to the bucket 1, 2 is mapped to the bucket 2 and 3 is mapped to the bucket 3.
+</p>
+
+<p>
+	Here, combining two features to create one useful feature is the feature engineering.
+</p>
+
+<p>
+	Sometimes, removing the unwanted feature is also feature engineering. As the feature which is not related degrade the performance of the model.
+</p>
+
+<p>
+	<b>Now, the steps to do feature engineering are as follows:</b>
+	<ul>
+		<li>Brainstorm features.</li>
+		<li>Create features.</li>
+		<li>Check how the features work with the model.</li>
+		<li>Start again from first until the features work perfectly.</li>
+	</ul>
+</p>
+
+<p>
+	This is what we do in the feature engineering.
+</p>
+
+<h4>Some words on feature engineering by the experts</h4>
+
+<blockquote>
+	Feature engineering is another topic which doesn’t seem to merit any review papers or books, or even chapters in books, but it is absolutely vital to ML success. Much of the success of machine learning is actually success in engineering features that a learner can understand.
+</blockquote>
+
+<blockquote>
+	Actually the success of all Machine Learning algorithms depends on how you present the data.
+</blockquote>
+
+<blockquote>
+	The algorithms we used are very standard for Kagglers. We spent most of our efforts in feature engineering.
+</blockquote>
+
+<blockquote>
+	Feature engineering is the process of transforming raw data into features that better represent the underlying problem to the predictive models, resulting in improved model accuracy on unseen data.
+</blockquote>
+
+<blockquote>
+	Feature engineering turn your inputs into things the algorithm can understand.
+</blockquote>
+
+<p>
+	Last but not least, <b>Automated Feature Engineering</b> is the current hot topic. But it requires a lot of resources. Few companies have already started working on it.
+</p>
+
+<p>
+	That's it for now.
+</p>
