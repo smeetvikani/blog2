@@ -1,0 +1,70 @@
+---
+layout: post
+title:  "What Is Bias In Artificial Neural Network?"
+subtitle: "Understanding bias in simple words"
+date:   2018-03-10 00:00:00 -0000
+background: '/img/posts/06.jpg'
+tags: [Machine Learning, ML, AI, Deep Learning, Neural Network, Artificial Intelligence, Bias]
+---
+<p>
+	<b>Bias</b> is one of the important terminologies in machine learning. Often we add bias while creating any model in the artificial neural network.
+</p>
+
+<p>
+	So, let's understand what is this mysterious bias.
+</p>
+
+<p>
+	In the neural network, we are given the input(<code>x</code>) and for that input, we need to predict the output(<code>y</code>). Here, we create a model(<code>mx + c</code>), which predicts the output.
+</p>
+
+<p>
+	While training, the model itself finds the appropriate value of the constants <code>m</code> and <code>c</code>.
+</p>
+
+<p>
+	Let's say we have the model as <code>y = mx</code> instead of the <code>y = mx + c</code>.
+</p>
+
+<img class="img-fluid" style="display: block;margin-left: auto; margin-right: auto;" src="/img/posts/bias-origin-single.png" alt="y = mx">
+<span class="caption text-muted">y = mx</span>
+
+<p>
+	Here, the model is having constraint to train itself and find a line which passes only through the origin.
+</p>
+
+<img class="img-fluid" style="display: block;margin-left: auto; margin-right: auto;" src="/img/posts/bias-origin-many.png" alt="y = mx">
+<span class="caption text-muted">y = mx</span>
+
+<p>
+	Many times for the given data, it is impossible for the algorithm to fit the model so that it passes through the origin.
+</p>
+
+<p>
+	Who doesn't need the freedom to perform well?
+</p>
+
+<p>
+	Let's give some freedom to the algorithm by changing the model as <code>mx + c</code> instead of <code>mx</code>, so that the model can find a line which fits the given data.
+</p>
+
+<img class="img-fluid" style="display: block;margin-left: auto; margin-right: auto;" src="/img/posts/bias-intercept-many.png" alt="y = mx + c">
+<span class="caption text-muted">y = mx + c</span>
+
+<p>
+	Now, it is having the full freedom to train itself and find a model which fits the best for the given data.
+</p>
+
+<p>
+	Here, the constant <code>c</code> is the <b>bias</b>.
+</p>
+
+<p>
+	<b>Bias</b> is a constant which helps the model in a way that it can fit best for the given data.
+</p>
+
+<p>
+	In other words, <b>Bias</b> is a constant which gives freedom to perform best.
+</p>
+
+<p>This is <b>Bias</b>. That's it for now.</p>
