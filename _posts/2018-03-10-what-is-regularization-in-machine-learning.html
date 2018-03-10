@@ -1,0 +1,69 @@
+---
+layout: post
+title:  "What Is Regularization In Machine Learning?"
+subtitle: "Solving overfitting problem with regularization"
+date:   2018-03-10 00:00:60 -0000
+background: '/img/posts/06.jpg'
+tags: [Machine Learning, ML, AI, Deep Learning, Neural Network, Artificial Intelligence, Regularization, Lasso, Ridge, L1, L2]
+---
+<p>
+	<b>Regularization</b> is a technique which is used to solve the overfitting problem of the machine learning models.
+</p>
+
+<h3>What is overfitting?</h3>
+
+<p>
+	Overfitting is a phenomenon which occurs when a model learns the detail and noise in the training data to an extent that it negatively impacts the performance of the model on new data.
+</p>
+
+<p>
+	So the overfitting is a major problem as it negatively impacts the performance.
+</p>
+
+<p>Regularization technique to the rescue.</p>
+
+<p>
+	Generally, a good model does not give more weight to a particular feature. The weights are evenly distributed. This can be achieved by doing regularization.
+</p>
+
+<p>
+	<b>There are two types of regularization as follows:</b>
+	<ul>
+		<li><b>L1 Regularization or Lasso Regularization</b></li>
+		<li><b>L2 Regularization or Ridge Regularization</b></li>
+	</ul>
+</p>
+
+<h3>
+	L1 Regularization or Lasso Regularization
+</h3>
+
+<p>
+    L1 Regularization or Lasso Regularization adds a penalty to the error function. The penalty is
+    the sum of the <b>absolute</b> values of weights.
+</p>
+
+<img class="img-fluid" style="display: block;margin-left: auto; margin-right: auto;" src="/img/posts/l1-regularization.png" alt="L1 Regularization or Lasso Regularization">
+<span class="caption text-muted">L1 Regularization or Lasso Regularization</span>
+
+<p>
+	<code>p</code> is the tuning parameter which decides how much we want to penalize the model.
+</p>
+
+<h3>
+	L2 Regularization or Ridge Regularization
+</h3>
+
+<p>
+    L2 Regularization or Ridge Regularization also adds a penalty to the error function. But the penalty here is
+    the sum of the <b>squared</b> values of weights.
+</p>
+
+<img class="img-fluid" style="display: block;margin-left: auto; margin-right: auto;" src="/img/posts/l2-regularization.png" alt="L2 Regularization or Ridge Regularization">
+<span class="caption text-muted">L2 Regularization or Ridge Regularization</span>
+
+<p>
+	Similar to L1, in L2 also, <code>p</code> is the tuning parameter which decides how much we want to penalize the model.
+</p>
+
+<p>This is <b>Regularization</b>. That's it for now.</p>
