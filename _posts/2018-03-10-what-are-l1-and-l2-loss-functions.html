@@ -1,0 +1,59 @@
+---
+layout: post
+title:  "What Are L1 and L2 Loss Functions?"
+subtitle: "L1 vs L2 Loss Function"
+date:   2018-03-10 00:00:30 -0000
+background: '/img/posts/06.jpg'
+tags: [Machine Learning, ML, AI, Deep Learning, Neural Network, Artificial Intelligence, L1 Loss Function, L2 Loss Function, Loss Function]
+---
+<p>
+	<b>L1</b> and <b>L2</b> are two loss functions in machine learning which are used to minimize the error.
+</p>
+
+<p>
+	<b>L1 Loss function</b> stands for <b>Least Absolute Deviations</b>. Also known as <b>LAD</b>.
+</p>
+
+<p>
+	<b>L2 Loss function</b> stands for <b>Least Square Errors</b>. Also known as <b>LS</b>.
+</p>
+
+<br>
+
+<h3>
+	L1 Loss Function
+</h3>
+
+<p>
+	L1 Loss Function is used to minimize the error which is the sum of the all the absolute differences between the true value and the predicted value.
+</p>
+
+<img class="img-fluid" style="display: block;margin-left: auto; margin-right: auto;" src="/img/posts/l1-loss-function.png" alt="L1 Loss Function">
+<span class="caption text-muted">L1 Loss Function</span>
+
+<br>
+
+<h3>
+	L2 Loss Function
+</h3>
+
+<p>
+	L2 Loss Function is used to minimize the error which is the sum of the all the squared differences between the true value and the predicted value.
+</p>
+
+<img class="img-fluid" style="display: block;margin-left: auto; margin-right: auto;" src="/img/posts/l2-loss-function.png" alt="L2 Loss Function">
+<span class="caption text-muted">L2 Loss Function</span>
+
+<br>
+
+<h3>
+	How to decide between L1 and L2 Loss Function?
+</h3>
+
+<p>
+	Generally, L2 Loss Function is preferred in most of the cases. But when the outliers are present in the dataset, then the L2 Loss Function does not perform well. The reason behind this bad performance is that if the dataset is having outliers, then because of the consideration of the squared differences, it leads to the much larger error. Hence, L2 Loss Function is not useful here. Prefer L1 Loss Function as it is not affected by the outliers or remove the outliers and then use L2 Loss Function.
+</p>
+
+<p>
+	That's it for now.
+</p>
