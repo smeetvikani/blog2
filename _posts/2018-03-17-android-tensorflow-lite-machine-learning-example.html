@@ -1,0 +1,71 @@
+---
+layout: post
+title:  "Android TensorFlow Lite Machine Learning Example"
+subtitle: "Using TensorFlow Lite Library For Object Detection"
+date:   2018-03-17 00:00:30 -0000
+background: '/img/posts/06.jpg'
+tags: [Machine Learning, ML, AI, Deep Learning, Neural Network, Artificial Intelligence, Android, TensorFlow Lite, Android Machine Learning Example]
+---
+<p>
+	<b>TensorFlow Lite</b> is TensorFlow’s lightweight solution for mobile and embedded devices.
+</p>
+
+<p>
+	<b>TensorFlow Lite is better as:</b>
+	<ul>
+  		<li>TensorFlow Lite enables on-device machine learning inference with low latency. Hence, it is fast.</li>
+  		<li>TensorFlow Lite takes small binary size. Hence, good for mobile devices.</li>
+  		<li>TensorFlow Lite also supports hardware acceleration with the Android Neural Networks API.</li>
+	</ul>
+</p>
+
+<p>
+	<b>TensorFlow Lite uses many techniques for achieving low latency such as:</b>
+	<ul>
+		<li>Optimizing the kernels for mobile apps.</li>
+		<li>Pre-fused activations.</li>
+		<li>Quantized kernels that allow smaller and faster (fixed-point math) models.</li>
+	</ul>
+</p>
+
+<h3>
+	How to use TensorFlow Lite in an Android application?
+</h3>
+
+<p>
+	The most important tricky part while using the TensorFlow Lite is to prepare the model(.tflite) which is different from the normal TensorFlow model.
+</p>
+
+<p>
+	In order to run the model with the TensorFlow Lite, you will have to convert the model into the model(.tflite) which is accepted by the TensorFlow Lite. Follow the steps from <a href="https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/lite#step-2-model-format-conversion" target="_blank">here</a>.
+</p>
+
+<p>
+	Now, you will have the model(.tflite) and the label file. You can start using these model and label files in your Android application to load the model and to predict the output using the TensorFlow Lite library.
+</p>
+
+<p>
+	I have created a complete running sample application using the TensorFlow Lite for object detection. <a href="https://github.com/amitshekhariitbhu/Android-TensorFlow-Lite-Example" target="_blank">Check the project here.</a>
+</p>
+
+<p>
+	Credit: The classifier example has been taken from Google TensorFlow example.
+</p>
+
+<p>
+	<a href="https://github.com/amitshekhariitbhu/Android-TensorFlow-Lite-Example" target="_blank">Sample Application - Object Detection Example</a>
+</p>
+
+<img class="img-fluid" style="display: block;margin-left: auto; margin-right: auto;" src="/img/posts/tflite-keyboard-example.png" alt="Object Detection">
+<span class="caption text-muted">Object Detection</span>
+
+<img class="img-fluid" style="display: block;margin-left: auto; margin-right: auto;" src="/img/posts/tflite-sample-example.png" alt="Object Detection">
+<span class="caption text-muted">Object Detection</span>
+
+<p>
+	<b><a href="https://github.com/amitshekhariitbhu/Android-TensorFlow-Lite-Example" target="_blank">Complete Project Link.</b>
+</p>
+
+<p>
+	That's it for now.
+</p>
