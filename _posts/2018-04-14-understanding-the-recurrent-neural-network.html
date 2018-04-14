@@ -1,0 +1,75 @@
+---
+layout: post
+title:  "Understanding The Recurrent Neural Network"
+subtitle: "RNN - The Recurrent Neural Network"
+date:   2018-04-14 10:00:00 -0000
+background: '/img/posts/06.jpg'
+tags: [Machine Learning, ML, AI, Deep Learning, Neural Network, Artificial Intelligence, RNN, Recurrent Neural Network, LSTM]
+---
+<h3>
+	What is Recurrent Neural Network (RNN)?
+</h3>
+
+<p>
+	As per Wikipedia, a recurrent neural network (RNN) is a class of artificial neural network where connections between units form a directed graph along a sequence. This allows it to exhibit dynamic temporal behavior for a time sequence. Unlike feedforward neural networks, RNNs can use their internal state (memory) to process sequences of inputs. This makes them applicable to tasks such as unsegmented, connected handwriting recognition or speech recognition.
+</p>
+
+<p>
+	Recurrent Neural Network comes into the picture when any model needs context to be able to provide the output based on the input.
+</p>
+
+<p>
+	Sometimes the context is the single most important thing for the model to predict the most appropriate output.
+</p>
+
+<p>
+	Let's understand this by an analogy. Suppose you are watching a movie, you keep watching the movie as at any point in time, you have the context because you have seen the movie until that point, then only you are able to relate everything correctly. It means that you remember everything that you have watched.
+</p>
+
+<p>
+	Similarly, RNN remembers everything. In other neural networks, all the inputs are independent of each other. But in RNN, all the inputs are related to each other. Let's say you have to predict the next word in a given sentence, in that case, the relation among all the previous words helps in predicting the better output. The RNN remembers all these relations while training itself.
+</p>
+
+<p>
+	In order to achieve it, the RNN creates the networks with loops in them, which allows it to persist the information.
+</p>
+
+<img class="img-fluid" style="display: block;margin-left: auto; margin-right: auto;" src="/img/posts/rnn-rolled.png" alt="RNN Rolled">
+<span class="caption text-muted">Source: colah's blog</span>
+
+<p>
+	This loop structure allows the neural network to take the sequence of input. If you see the unrolled version, you will understand it better.
+</p>
+
+<img class="img-fluid" style="display: block;margin-left: auto; margin-right: auto;" src="/img/posts/rnn-unrolled.png" alt="RNN Unrolled">
+<span class="caption text-muted">Source: colah's blog</span>
+
+<p>
+	As you can see in the unrolled version. First, it takes the x(0) from the sequence of input and then it outputs h(0) which together with x(1) is the input for the next step. So, the h(0) and x(1) is the input for the next step. Similarly, h(1) from the next is the input with x(2) for the next step and so on. This way, it keeps remembering the context while training.
+</p>
+
+<p>
+	This way the RNN works.
+</p>
+
+<p>
+	RNN helps wherever we need the context from the previous input.
+</p>
+
+<p>
+	<b>The following are the few applications of the RNN:</b>
+	<ul>
+  		<li>Next word prediction.</li>
+  		<li>Music composition.</li>
+  		<li>Image captioning</li>
+  		<li>Speech recognition</li>
+  		<li>Time series anomaly detection</li>
+  		<li>Stock market prediction</li>
+	</ul>
+</p>
+
+<p>Now a days, RNN has become very popular as it helps in solving many real-life problems which the industries are facing.</p>
+
+<p>
+	That's it for now.
+</p>
