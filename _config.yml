@@ -3,7 +3,7 @@ email:             amit.shekhar.iitbhu@gmail.com
 description:       Let's Learn AI is all about learning artificial intelligence, machine learning, natural language processing and etc.
 author:            Amit Shekhar
 baseurl:           ""
-url:               ""
+url:               "https://github.com/smeetvikani/blog2"
 
 # Social Profiles
 twitter_username:  amitiitbhu
